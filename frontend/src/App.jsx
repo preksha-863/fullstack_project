@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 
-
 function App(){
   const [facts, setFacts] = useState([]);
 
