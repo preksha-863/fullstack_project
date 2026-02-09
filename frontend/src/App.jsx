@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 
 function App(){
   const [facts, setFacts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/facts")
+    fetch("https://fullstack-project-2-ci9l.onrender.com/api/facts")
       .then(res => res.json())
       .then(data => setFacts(data));
   }, []);
@@ -20,5 +21,4 @@ function App(){
     </div>
   );
 }
-
 export default App
